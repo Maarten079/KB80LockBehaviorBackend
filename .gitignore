@@ -14,3 +14,5 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+/.idea/dataSources.local.xml
+/.idea/dataSources/7fc68c64-8d63-4074-8888-f9221880fdef.xml
