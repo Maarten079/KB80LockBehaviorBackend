@@ -20,7 +20,7 @@ class LockObjectController extends AbstractController
      * @param EntityManagerInterface $entityManager
      * @return Response
      */
-    public function number(Request $request, LoggerInterface $logger, EntityManagerInterface $entityManager): Response
+    public function processLockObjectRequest(Request $request, LoggerInterface $logger, EntityManagerInterface $entityManager): Response
     {
         $response = new Response();
         $data = json_decode($request->getContent(), true);
@@ -48,6 +48,22 @@ class LockObjectController extends AbstractController
         }
 
         return $response;
+    }
+
+    /**
+     * @Route("/", methods={"GET"})
+     * @param Request $request
+     * @param LoggerInterface $logger
+     * @param EntityManagerInterface $entityManager
+     * @return Response
+     */
+    public function lockObjectOverview()
+    {
+        return $this->render('base.html.twig',
+            [
+                'title' => 'overview'
+            ]
+        );
     }
 
     private function isDataValid(array $data, LoggerInterface $logger) : bool
