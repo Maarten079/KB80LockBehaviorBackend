@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6658b4d6-74e5-4396-b107-acac4086a72c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/LockObjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LockObjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/KB80LockBehaviorBackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/KB80LockBehaviorBackend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,6 +137,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iaqXFs6oZTv8Ox7lCqhTemyrQb" />
@@ -144,9 +153,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Maarten\Documents\Development\School\KB80LockBehaviorBackend\public" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -162,6 +177,7 @@
       <workItem from="1602156429005" duration="6493000" />
       <workItem from="1602246450498" duration="830000" />
       <workItem from="1602587527978" duration="5093000" />
+      <workItem from="1602761032846" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="Add doctrine">
       <created>1602157643011</created>
@@ -221,6 +237,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="277" height="457" key="HiddenNamespacesPopup/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1602588653690" />
+    <state x="728" y="259" key="RollbackChangesDialog" timestamp="1602680054364">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="728" y="259" key="RollbackChangesDialog/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1602680054364" />
     <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1602159728239">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -237,9 +257,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="681" y="259" key="run.anything.popup/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1602589906066" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1602588672961">
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1602681248947">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1602588672961" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1602681248947" />
   </component>
 </project>

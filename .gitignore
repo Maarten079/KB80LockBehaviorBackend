@@ -16,3 +16,10 @@
 ###< symfony/phpunit-bridge ###
 /.idea/dataSources.local.xml
 /.idea/dataSources/7fc68c64-8d63-4074-8888-f9221880fdef.xml
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
