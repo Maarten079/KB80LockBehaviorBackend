@@ -52,18 +52,27 @@ class LockObjectController extends AbstractController
 
     /**
      * @Route("/", methods={"GET"})
-     * @param Request $request
-     * @param LoggerInterface $logger
-     * @param EntityManagerInterface $entityManager
      * @return Response
      */
     public function lockObjectOverview()
     {
+        $lockObjects = $this->getDoctrine()->getRepository(LockObject::class)->findAll();
         return $this->render('base.html.twig',
             [
-                'title' => 'overview'
+                'title' => 'overview',
+                'lockObjects' => $lockObjects
             ]
         );
+    }
+
+    /**
+     * @Route("/filterLockObject", methods={"POST"})
+     * @param Request $request
+     * @return void
+     */
+    public function lockObjectFilterOverview(Request $request)
+    {
+        dump($request); exit();
     }
 
     private function isDataValid(array $data, LoggerInterface $logger) : bool
