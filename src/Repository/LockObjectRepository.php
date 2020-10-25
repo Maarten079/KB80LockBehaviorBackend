@@ -19,6 +19,10 @@ class LockObjectRepository extends ServiceEntityRepository
         parent::__construct($registry, LockObject::class);
     }
 
+    public function getQueryBuilder() {
+        return $this->createQueryBuilder('l');
+    }
+
     // /**
     //  * @return LockObject[] Returns an array of LockObject objects
     //  */
