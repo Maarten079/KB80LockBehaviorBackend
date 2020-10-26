@@ -27,19 +27,25 @@ class LockObjectController extends AbstractController
         $data = json_decode($request->getContent(), true);
 
         if($this->isDataValid($data, $logger)) {
-            $lockObject = new LockObject();
-            $lockObject->setCreatedAt(DateTime::createFromFormat('Y-m-d H:i:s', $data['timeStamp']));
-            $lockObject->setLocked($data['locked']);
-            $lockObject->setMessage($data['message']);
-            $lockObject->setUserId($data['userId']);
+            if(!$data['dryRunMode']) {
+                $lockObject = new LockObject();
+                $lockObject->setCreatedAt(DateTime::createFromFormat('Y-m-d H:i:s', $data['timeStamp']));
+                $lockObject->setLocked($data['locked']);
+                $lockObject->setMessage($data['message']);
+                $lockObject->setUserId($data['userId']);
 
-            try {
-                $entityManager->persist($lockObject);
-                $entityManager->flush();
-                $response->isOk();
+                try {
+                    $entityManager->persist($lockObject);
+                    $entityManager->flush();
+                    $response->isOk();
+                }
+                catch(ORMException $e) {
+                    $response->setContent('Database error');
+                    $response->isInvalid();
+                }
             }
-            catch(ORMException $e) {
-                $response->setContent('Database error');
+            else {
+                $response->setContent('Data received and valid but not saved (dry run mode)');
                 $response->isInvalid();
             }
         }
@@ -141,7 +147,9 @@ class LockObjectController extends AbstractController
             isset($data['location']) &&
             is_string($data['location']) &&
             isset($data['message']) &&
-            is_string($data['message'])
+            is_string($data['message']) &&
+            isset($data['dryRunMode']) &&
+            is_bool($data['dryRunMode'])
         )
         {
             $logger->log('info', json_encode($data) . ' is valid');
