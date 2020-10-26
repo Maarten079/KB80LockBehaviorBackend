@@ -46,7 +46,7 @@ class LockObjectController extends AbstractController
             }
             else {
                 $response->setContent('Data received and valid but not saved (dry run mode)');
-                $response->isInvalid();
+                $response->isOk();
             }
         }
         else {
