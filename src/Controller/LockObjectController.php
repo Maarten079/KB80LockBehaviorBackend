@@ -90,8 +90,8 @@ class LockObjectController extends AbstractController
             $request->get('location') &&
             !empty($request->get('location'))
         ) {
-            $qb->andWhere('l.location > :location');
-            $qb->setParameter('location', $request->get('location'));
+            $qb->andWhere('l.location like :location');
+            $qb->setParameter('location', '%' . $request->get('location') . '%');
         }
 
         if (
