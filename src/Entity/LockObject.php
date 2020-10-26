@@ -38,6 +38,11 @@ class LockObject
     private $locked;
 
     /**
+     * @ORM\Column(name="location", type="string", nullable=false)
+     */
+    private $location;
+
+    /**
      * @ORM\Column(name="message", type="string", nullable=false, length=1000)
      */
     private $message;
@@ -125,5 +130,21 @@ class LockObject
     public function setMessage($message): void
     {
         $this->message = $message;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLocation()
+    {
+        return $this->location;
+    }
+
+    /**
+     * @param mixed $location
+     */
+    public function setLocation($location): void
+    {
+        $this->location = $location;
     }
 }

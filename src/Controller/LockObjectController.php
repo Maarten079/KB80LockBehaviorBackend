@@ -33,6 +33,7 @@ class LockObjectController extends AbstractController
                 $lockObject->setLocked($data['locked']);
                 $lockObject->setMessage($data['message']);
                 $lockObject->setUserId($data['userId']);
+                $lockObject->setLocation($data['location']);
 
                 try {
                     $entityManager->persist($lockObject);
@@ -84,6 +85,14 @@ class LockObjectController extends AbstractController
         // Always check for name to prevent false andWhere
         $qb->where('l.userId like :participant');
         $qb->setParameter('participant', '%' . $request->get('participant') . '%');
+
+        if (
+            $request->get('location') &&
+            !empty($request->get('location'))
+        ) {
+            $qb->andWhere('l.location > :location');
+            $qb->setParameter('location', $request->get('location'));
+        }
 
         if (
             $request->get('from-date') &&

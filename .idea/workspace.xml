@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6658b4d6-74e5-4396-b107-acac4086a72c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/migrations/Version20201026115551.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LockObjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LockObjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/LockObject.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/LockObject.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +177,7 @@
       <workItem from="1602844955611" duration="1417000" />
       <workItem from="1603458540659" duration="4146000" />
       <workItem from="1603653410450" duration="4287000" />
-      <workItem from="1603711810755" duration="882000" />
+      <workItem from="1603711810755" duration="1929000" />
     </task>
     <task id="LOCAL-00001" summary="Add doctrine">
       <created>1602157643011</created>
@@ -217,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603712546036</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="isOk">
+      <created>1603712717733</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603712717733</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +241,8 @@
     <MESSAGE value="created overview and search" />
     <MESSAGE value="added filters" />
     <MESSAGE value="don't save on dry run" />
-    <option name="LAST_COMMIT_MESSAGE" value="don't save on dry run" />
+    <MESSAGE value="isOk" />
+    <option name="LAST_COMMIT_MESSAGE" value="isOk" />
   </component>
   <component name="WindowStateProjectService">
     <state x="617" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603459370968">
@@ -245,10 +257,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="482" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1602159182625" />
-    <state x="587" y="121" key="CommitChangelistDialog2" timestamp="1603712545481">
+    <state x="587" y="121" key="CommitChangelistDialog2" timestamp="1603712717368">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="587" y="121" key="CommitChangelistDialog2/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1603712545481" />
+    <state x="587" y="121" key="CommitChangelistDialog2/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1603712717368" />
     <state width="1382" height="305" key="GridCell.Tab.0.bottom" timestamp="1602160459784">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -277,10 +289,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="1046" y="204" key="SettingsEditor/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1603459337262" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1603712547076">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1603712718610">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1603712547076" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1603712718610" />
     <state x="855" y="426" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1602590184773">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -301,9 +313,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="681" y="259" key="run.anything.popup/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1602589906066" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1603656163819">
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1603713726576">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1603656163819" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.360.1536.824@0.0.2048.1112" timestamp="1603713726576" />
   </component>
 </project>
