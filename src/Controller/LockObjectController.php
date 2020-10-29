@@ -26,6 +26,12 @@ class LockObjectController extends AbstractController
         $response = new Response();
         $data = json_decode($request->getContent(), true);
 
+        if(empty($data)) {
+            $response->setStatusCode(400);
+            $response->setContent('Request body empty');
+            return $response;
+        }
+
         if($this->isDataValid($data, $logger)) {
             if(!$data['dryRunMode']) {
                 $lockObject = new LockObject();
