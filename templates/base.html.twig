@@ -39,6 +39,13 @@
                     </select>
                 </div>
                 <div class="form-group row">
+                    <select class="form-control" id="active-conference-program" name="active-conference-program">
+                        <option value="2" selected="selected">conference program (un)detected</option>
+                        <option value="1">conference program detected</option>
+                        <option value="0">conference program undetected</option>
+                    </select>
+                </div>
+                <div class="form-group row">
                     <input type="text" class="form-control" id="message" name="message" placeholder="message">
                 </div>
                 <input type="submit">
@@ -54,6 +61,7 @@
                     <th scope="col">Location</th>
                     <th scope="col">Timestamp</th>
                     <th scope="col">Lock status</th>
+                    <th scope="col">Conference program</th>
                     <th scope="col">Message</th>
                 </tr>
                 </thead>
@@ -65,6 +73,7 @@
                         <td>{{ lockObject.location }}</td>
                         <td>{{ lockObject.createdAt|date("d-m-Y") }}</td>
                         <td>{% if lockObject.locked %}locked{% else %}unlocked{% endif %}</td>
+                        <td>{% if lockObject.ActiveConferenceProgram %}detected{% else %}undetected{% endif %}</td>
                         <td>{{ lockObject.message }}</td>
                     </tr>
                 {% endfor %}

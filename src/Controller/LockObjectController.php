@@ -134,6 +134,14 @@ class LockObjectController extends AbstractController
             $qb->setParameter('message', '%' . $request->get('message') . '%');
         }
 
+        if(
+            (int) $request->get('active-conference-program') !== 2
+        )
+        {
+            $qb->andWhere('l.activeConferenceProgram = :activeConferenceProgram');
+            $qb->setParameter('activeConferenceProgram', $request->get('active-conference-program') == 1);
+        }
+
         try {
         $lockObjects = $qb->getQuery()->execute();
 
@@ -164,7 +172,9 @@ class LockObjectController extends AbstractController
             isset($data['message']) &&
             is_string($data['message']) &&
             isset($data['dryRunMode']) &&
-            is_bool($data['dryRunMode'])
+            is_bool($data['dryRunMode']) &&
+            isset($data['activeConferenceProgram']) &&
+            is_bool($data['activeConferenceProgram'])
         )
         {
             $logger->log('info', json_encode($data) . ' is valid');

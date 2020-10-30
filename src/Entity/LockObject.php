@@ -47,6 +47,12 @@ class LockObject
      */
     private $message;
 
+    /**
+     * @ORM\Column(name="active_conference_program", type="boolean", nullable=false)
+     *
+     */
+    private $activeConferenceProgram;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -146,5 +152,19 @@ class LockObject
     public function setLocation($location): void
     {
         $this->location = $location;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getActiveConferenceProgram() {
+        return $this->activeConferenceProgram;
+    }
+
+    /**
+     * @param mixed $activeConferenceProgram
+     */
+    public function setActiveConferenceProgram($activeConferenceProgram): void {
+        $this->activeConferenceProgram = $activeConferenceProgram;
     }
 }
