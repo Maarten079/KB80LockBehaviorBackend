@@ -40,6 +40,7 @@ class LockObjectController extends AbstractController
                 $lockObject->setMessage($data['message']);
                 $lockObject->setUserId($data['userId']);
                 $lockObject->setLocation($data['location']);
+                $lockObject->setActiveConferenceProgram($data['activeConferenceProgram']);
 
                 try {
                     $entityManager->persist($lockObject);
